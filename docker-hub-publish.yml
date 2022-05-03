@@ -1,6 +1,12 @@
 name: Publish Docker image
 
 on:
+workflow_dispatch:
+    inputs:
+      name:
+        description: "TAG"
+        required: true
+        default: "master"
 #  release:
 #    types: [published]
   push:
